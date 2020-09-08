@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto" sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    background: url('../img/edwyn.png') no-repeat;
+}
+
+.about-container button {
+    padding: 7px 35px;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 2px;
+    border-color: #fff;
+}
+
+.about-container {
+    background: url('../img/edwyn2.jpg') no-repeat left;
+    background-size: 55%;
+    background-color: rgba(13, 110, 139, 0.45);
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+.aboutMe-container {
+    width: 55%;
+    float: right;
+    background-color: #fff;
+    padding: 150px;
+}
+
+.aboutMe-container h1 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.about-text {
+    font-size: 20px;
+    color: rgba(13, 110, 139, 0.911);
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.skill-container {
+    margin-top: 800px;
+    background: url('../img/edwyn2.jpg') no-repeat right;
+    background-size: 55%;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+
+
+@media screen and (max-width:1200px) {
+    .aboutMe-container {
+        padding: 80px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .about-container {
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    .aboutMe-container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .about-container {
+        padding: 0;
+    }
+    .aboutMe-container {
+        padding: 60px;
+    }
+}
