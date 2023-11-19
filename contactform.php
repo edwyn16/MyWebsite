@@ -1,30 +1,38 @@
 <?php
 
-if (isset($_POST['submit'])) {
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
-    $mailFrom = $_POST['E-mail'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
+$name = $_POST['name'];
+$mailFrom = $_POST['email'];
+$number = $_POST['number'];
+$subject = $_POST['subject'];
+$message = $_POST['message'];
 
-    if (empty($firstname) || empty($lastname) || empty($mailFrom) || empty($subject) || empty($message)) {
-        header("Location: ../contact.php?mailsent=empty");
-    } else {
-        if (filter_var($mailFrom, FILTER_VALIDATE_EMAIL)) {
-            header("Location: ../contact.php?mailsent=invalidemail");
-        }
-    }
+// This loads the composer package
+require "vendor/autoload.php";
 
-    $mailTo = "edwyn__4@hotmail.com";
-    $headers = "From: " . $mailFrom;
-    $txt = "You have recieved an e-mail from " . $firstname . $lastname .
-            " regarding the following subject. " . " \n\n " .
-            " Subject is: " . $subject . " . \n\n " . $message;
+// Here I'm importing PHP Mailer name spaces
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
 
-    mail($mailTo, $subject, $txt, $headers);
-    header("Location: contact.php?mailsent");
-} else {
-    header("Location: ../contact.php?mailsent=error");
-}
+$mail = new PHPMailer(true);
+
+$mail->isSMTP();
+$mail->SMTPAuth = true;
+
+$mail->Host = "smtp.office365.com";
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+$mail->Port = 587;
+
+$mail->Username = "edwyn__4@hotmail.com";
+$mail->Password = "edwynJones12!!";
+
+$mail->setFrom($mailFrom, $firstname, $lastname);
+$mail->addAddress("edwyn__4@hotmail.com");
+
+$mail->Subject = $subject;
+$mail->Body = $message;
+
+$mail->send();
+
+echo "Email Sent";
 
 ?>
