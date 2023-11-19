@@ -1,3 +1,6 @@
+@import "root.css";
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Shadows+Into+Light&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -10,80 +13,125 @@ body {
     display: flex;
     /* align-items: center; */
     /* justify-content: center; */
-    background: url('../img/edwyn.png') no-repeat;
+    background: url('../img/codeScreen.png') no-repeat;
 }
 
-.about-container button {
+.homeBtn {
     padding: 7px 35px;
     cursor: pointer;
     outline: none;
     background: transparent;
     color: #fff;
+    font-family: 'Shadows Into Light', cursive;
     font-size: 20px;
-    border-radius: 2px;
+    font-weight: bold;
+    border-radius: 8px;
     border-color: #fff;
 }
 
-.about-container {
+.homeBtn:hover {
+    border-color: var(--favouriteColor);
+    color: var(--favouriteColor);
+}
+
+.about__container {
     background: url('../img/edwyn2.jpg') no-repeat left;
     background-size: 55%;
-    background-color: rgba(13, 110, 139, 0.45);
     overflow: hidden;
     padding: 100px 0;
 }
 
-.aboutMe-container {
+.aboutMe__container {
     width: 55%;
     float: right;
     background-color: #fff;
     padding: 150px;
 }
 
-.aboutMe-container h1 {
+.main__title {
     margin-bottom: 30px;
-    font-size: 30px;
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
     font-weight: 900;
+    text-align: center;
 }
 
-.about-text {
+.about__text {
     font-size: 20px;
-    color: rgba(13, 110, 139, 0.911);
+    color: var(--favouriteColor);
     line-height: 30px;
     text-align: justify;
     margin-bottom: 40px;
 }
 
-.skill-container {
-    margin-top: 800px;
-    background: url('../img/edwyn2.jpg') no-repeat right;
-    background-size: 55%;
-    overflow: hidden;
-    padding: 100px 0;
+.skills__container {
+    padding: 10px 10px;
 }
 
+.sub__title {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
 
+.skills {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.list {
+    color: var(--favouriteColor);
+}
+
+.p__section {
+    padding: 10px 10px;
+}
+
+.pTxt {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 20px;
+    padding: 30px 10px;
+}
+
+.seeProjects {
+    cursor: pointer;
+    background: transparent;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 7px 36px;
+}
+
+.seeProjects:hover {
+    border-color: var(--favouriteColor);
+    color: var(--favouriteColor);
+}
 
 @media screen and (max-width:1200px) {
-    .aboutMe-container {
+    .aboutMe__container {
         padding: 80px;
     }
 }
 
 @media screen and (max-width:1000px) {
-    .about-container {
+    .about__container {
         background-size: 100%;
         padding: 100px 40px;
     }
-    .aboutMe-container {
+    .aboutMe__container {
         width: 100%;
     }
 }
 
 @media screen and (max-width:600px) {
-    .about-container {
+    .about__container {
         padding: 0;
     }
-    .aboutMe-container {
+    .aboutMe__container {
         padding: 60px;
     }
 }

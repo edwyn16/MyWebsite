@@ -1,0 +1,10 @@
+:root {
+    --primary-color: rgba(13, 110, 139, 0.45);
+    --overlay-color: rgba(24, 39, 51, 0.85);
+    --menu-speed: rgba(0.75s);
+    --white: rgba(245, 245, 245);
+    --white2: #fafafa;
+    --favouriteColor: rgba(255, 0, 0);
+    --marlot-red: rgba(127, 23, 31);
+    --form-shadow: rgba(0, 0, 0, 0.1);
+}

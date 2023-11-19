@@ -1,8 +1,4 @@
-:root {
-    --primary-color: rgba(13, 110, 139, 0.45);
-    --overlay-color: rgba(24, 39, 51, 0.85);
-    --menu-speed: rgba(0.75s);
-}
+@import "root.css";
 
 * {
     box-sizing: border-box;
@@ -23,7 +19,7 @@ body {
 }
 
 .showcase {
-    background-color: var(--primary-color);
+    /* background-color: var(--test); */
     color: #fff;
     height: 100vh;
     position: relative;
@@ -31,11 +27,11 @@ body {
 
 .showcase:before {
     content: '';
-    background: url('../img/edwyn.png') no-repeat center;
-    position: absolute;
+    background: url('../img/codeScreen.png') no-repeat center;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 150%;
     height: 100%;
     z-index: -1;
 }
@@ -51,6 +47,7 @@ body {
 
 .showcase h1 {
     font-size: 4rem;
+    color: white;
 }
 
 .showcase p {
